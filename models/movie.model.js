@@ -9,12 +9,12 @@ const movieSchema = new Schema({
   published: { type: Boolean, default: false },
   released: { type: Boolean, default: false },
   poster_url: { type: String },
-  release_date: { type: Date }, // Ensure proper Date format
-  publish_date: { type: Date }, // Ensure proper Date format
-  artists: [{ type: Schema.Types.ObjectId, ref: 'Artist' }], // Reference to the Artist model
+  release_date: { type: Date },
+  publish_date: { type: Date }, 
+  artists: [{ type: Schema.Types.ObjectId, ref: 'Artist' }],
   genres: [{ type: String }],
-  duration: { type: Number }, // Movie duration in minutes
-  critic_rating: { type: Number }, // Critic rating (perhaps 1-5 or 1-10 scale)
+  duration: { type: Number },
+  critic_rating: { type: Number },
   trailer_url: { type: String },
   wiki_url: { type: String },
   story_line: { type: String },
@@ -27,7 +27,7 @@ const movieSchema = new Schema({
       },
       language: { type: String },
       show_timing: { type: Date },
-      available_seats: { type: Number }, // Should be a number, not a string
+      available_seats: { type: Number }, 
       unit_price: { type: Number }
     }
   ]
